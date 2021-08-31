@@ -14,7 +14,7 @@ const StartingScreen: React.FC = () => {
     setAnotherPlayer(event.target.value)
   }
 
-  const updateName = (event: any) => {
+  const names = (event: any) => {
     event.preventDefault()
     setName(onePlayer)
     setOnePLayer('')
@@ -51,7 +51,7 @@ const StartingScreen: React.FC = () => {
       <div>
         <p>turn Time limit in seconds: 3s</p>
         <div>
-          <button onClick={updateName}>Start</button>
+          <button onClick={names}>Start</button>
         </div>
       </div>
     </div>
