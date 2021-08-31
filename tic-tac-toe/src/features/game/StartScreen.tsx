@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StartingScreen: React.FC = () => {
+const StartScreen: React.FC = () => {
   const [onePlayer, setOnePLayer] = useState('')
   const [name, setName] = useState('')
   const [anotherPlayer, setAnotherPlayer] = useState('')
@@ -29,7 +29,6 @@ const StartingScreen: React.FC = () => {
         <p>{name}</p>
         <p>{anotherName}</p>
       </div>
-
       <form className='formContainer'>
         <div className='inputNames'>
           <input
@@ -58,4 +57,4 @@ const StartingScreen: React.FC = () => {
   )
 }
 
-export default StartingScreen
+export default StartScreen

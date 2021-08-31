@@ -1,10 +1,10 @@
 import React from 'react'
-import StartingScreen from './components/StartingScreen'
+import StartScreen from './features/game/StartScreen'
 
 function App() {
   return (
     <div>
-      <StartingScreen />
+      <StartScreen />
     </div>
   )
 }
