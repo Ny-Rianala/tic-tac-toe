@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StartingBoard: React.FC = () => {
+const StartingScreen: React.FC = () => {
   const [onePlayer, setOnePLayer] = useState('')
   const [name, setName] = useState('')
   const [anotherPlayer, setAnotherPlayer] = useState('')
@@ -58,4 +58,4 @@ const StartingBoard: React.FC = () => {
   )
 }
 
-export default StartingBoard
+export default StartingScreen
