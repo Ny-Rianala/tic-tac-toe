@@ -61,6 +61,7 @@ button {
   font-size: 30px;
   line-height: 72px;
   cursor: pointer;
+  outline: none;
 }
 
 .playerO,
