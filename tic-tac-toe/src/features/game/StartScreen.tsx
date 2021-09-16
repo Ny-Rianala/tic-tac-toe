@@ -7,17 +7,11 @@ const StartScreen: React.FC = () => {
   const [anotherPlayer, setAnotherPlayer] = useState('')
   const [anotherName, setAnotherName] = useState('')
 
-  const handleInput = (event: {
-    preventDefault: () => void
-    target: { value: React.SetStateAction<string> }
-  }) => {
+  const handleInput = (event: any) => {
     setOnePLayer(event.target.value)
   }
 
-  const handleInputs = (event: {
-    preventDefault: () => void
-    target: { value: React.SetStateAction<string> }
-  }) => {
+  const handleInputs = (event: any) => {
     setAnotherPlayer(event.target.value)
   }
 
@@ -35,7 +29,6 @@ const StartScreen: React.FC = () => {
       <div className='namesWrapper'>
         <p>{name}</p>
         <p>{anotherName}</p>
-        <p>{names}</p>
       </div>
       <form className='formContainer'>
         <div className='inputNames'>
@@ -56,9 +49,10 @@ const StartScreen: React.FC = () => {
         </div>
       </form>
       <div>
+        <p>{names}</p>
         <p>turn Time limit in seconds: 3s</p>
         <div>
-          <Link to='/features/game/PlayerScreen'>
+          <Link to='/features/game/StartPlayersScreen'>
             <button>Start</button>
           </Link>
         </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const StartPlayersScreen = () => {
+const StartPlayersScreen: React.FC = () => {
   return (
     <div className='wrapper'>
       <h2 className='header'>Tic tac toe</h2>
       <div>
-        <p>turn Time limit in seconds: 3s</p>
+        <p>Turn Time limit in seconds: 3s</p>
         <div>
           <button>Start</button>
         </div>

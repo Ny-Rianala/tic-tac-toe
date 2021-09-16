@@ -1,8 +1,8 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 import StartPlayersScreen from './features/game/StartPlayersScreen'
 import StartScreen from './features/game/StartScreen'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Route exact path='/' component={StartScreen} />
           <Route
             exact
-            path='/features/game/StartPlayerScreen'
+            path='/features/game/StartPlayersScreen'
             component={StartPlayersScreen}></Route>
         </Switch>
       </Router>
