@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import CountDownTimer from '../../components/CountDownTimer'
 
 const StartScreen: React.FC = () => {
   const [onePlayer, setOnePLayer] = useState('')
@@ -50,7 +51,7 @@ const StartScreen: React.FC = () => {
       </form>
       <div>
         <p>{names}</p>
-        <p>turn Time limit in seconds: 3s</p>
+        <CountDownTimer />
         <div>
           <Link to='/features/game/StartPlayersScreen'>
             <button>Start</button>
