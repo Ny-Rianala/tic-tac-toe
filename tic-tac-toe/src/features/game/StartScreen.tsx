@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const StartScreen: React.FC = () => {
   const [onePlayer, setOnePLayer] = useState('')
@@ -6,11 +7,17 @@ const StartScreen: React.FC = () => {
   const [anotherPlayer, setAnotherPlayer] = useState('')
   const [anotherName, setAnotherName] = useState('')
 
-  const handleInput = (event: any) => {
+  const handleInput = (event: {
+    preventDefault: () => void
+    target: { value: React.SetStateAction<string> }
+  }) => {
     setOnePLayer(event.target.value)
   }
 
-  const handleInputs = (event: any) => {
+  const handleInputs = (event: {
+    preventDefault: () => void
+    target: { value: React.SetStateAction<string> }
+  }) => {
     setAnotherPlayer(event.target.value)
   }
 
@@ -28,6 +35,7 @@ const StartScreen: React.FC = () => {
       <div className='namesWrapper'>
         <p>{name}</p>
         <p>{anotherName}</p>
+        <p>{names}</p>
       </div>
       <form className='formContainer'>
         <div className='inputNames'>
@@ -35,14 +43,14 @@ const StartScreen: React.FC = () => {
             placeholder='leave empty to use AI or enter player name'
             type='text'
             value={onePlayer}
-            name='name-1'
+            name='firstPlayerName'
             onChange={handleInput}
           />
           <input
             placeholder='leave empty to use AI or enter player name'
             type='text'
             value={anotherPlayer}
-            name='name-2'
+            name='secondPlayersName'
             onChange={handleInputs}
           />
         </div>
@@ -50,7 +58,9 @@ const StartScreen: React.FC = () => {
       <div>
         <p>turn Time limit in seconds: 3s</p>
         <div>
-          <button onClick={names}>Start</button>
+          <Link to='/features/game/PlayerScreen'>
+            <button>Start</button>
+          </Link>
         </div>
       </div>
     </div>
